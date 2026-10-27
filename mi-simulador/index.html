@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Film Journal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Film Journal</h1>
+        <p>Tu diario visual de películas</p>
+    </header>
+
+    <main>
+
+        <!-- BIENVENIDA -->
+
+        <section class="bienvenida">
+
+            <h2>Bienvenido a Film Journal</h2>
+
+            <form id="formulario-usuario">
+
+                <input
+                    type="text"
+                    id="nombre-usuario"
+                    placeholder="Ingresá tu nombre"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="año-nacimiento"
+                    placeholder="Año de nacimiento"
+                    min="1900"
+                    max="2026"
+                    step="1"
+                    required
+                >
+
+                <button type="submit">
+                    Comenzar
+                </button>
+
+            </form>
+
+            <p id="mensaje-bienvenida"></p>
+
+        </section>
+
+        <!-- ACTORES FAVORITOS -->
+
+        <section id="actores">
+
+            <h2>Mis actores favoritos</h2>
+
+            <input
+                type="text"
+                id="actor-favorito"
+                placeholder="Nombre del actor"
+            >
+
+            <button id="boton-actor">
+                Agregar actor
+            </button>
+
+            <ul id="lista-actores"></ul>
+
+        </section>
+
+        <!-- AGREGAR PELÍCULAS -->
+
+        <section id="agregar-pelicula">
+
+            <h2>Agregar película</h2>
+
+            <form id="formulario-pelicula">
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Título de la película"
+                    required
+                >
+
+                <select id="genero" required>
+
+                    <option value="">
+                        Seleccioná un género
+                    </option>
+
+                    <option value="Terror">Terror</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Animación">Animación</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Romance">Romance</option>
+
+                </select>
+
+                <button type="submit">
+                    Agregar película
+                </button>
+
+            </form>
+
+            <p id="mensaje"></p>
+
+        </section>
+
+        <!-- RECOMENDAR PELÍCULAS -->
+
+        <section id="recomendaciones">
+
+            <h2>Recomendación de películas</h2>
+
+            <p>¿Qué género tenés ganas de ver?</p>
+
+            <select id="estado-animo">
+
+                <option value="Terror">Terror</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Ciencia ficción">Ciencia ficción</option>
+                <option value="Animación">Animación</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+
+            </select>
+
+            <button id="boton-recomendar">
+                Recomendar
+            </button>
+
+            <p id="resultado-recomendacion"></p>
+
+        </section>
+
+        <!-- BUSCAR PELÍCULA -->
+
+        <section id="buscar">
+
+            <h2>Buscar película</h2>
+
+            <input
+                type="text"
+                id="buscar-pelicula"
+                placeholder="Nombre de la película"
+            >
+
+            <button id="boton-buscar">
+                Buscar
+            </button>
+
+            <div id="resultado-busqueda"></div>
+
+        </section>
+
+        <!-- COLECCIÓN -->
+
+        <section id="coleccion">
+
+            <h2>Mi colección de películas</h2>
+
+            <label for="filtro-genero">
+                Filtrar por género:
+            </label>
+
+            <select id="filtro-genero">
+
+                <option value="Todos">Todos</option>
+                <option value="Terror">Terror</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Ciencia ficción">Ciencia ficción</option>
+                <option value="Animación">Animación</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+
+            </select>
+
+            <div id="contenedorpeliculas"></div>
+
+        </section>
+
+        <!-- CARGA ASÍNCRONA  -->
+
+        <section id="carga-diario">
+
+            <h2>Cargar mi diario</h2>
+
+            <button id="boton-cargar">
+                Cargar mi diario
+            </button>
+
+            <p id="estado-carga"></p>
+
+        </section>
+
+        <!-- STOCK -->
+
+        <section id="stock">
+
+            <h2>Stock de películas</h2>
+
+            <button id="boton-stock">
+                Consultar stock total
+            </button>
+
+            <p id="resultado-stock"></p>
+
+        </section>
+
+        <!-- ADMINISTRACIÓN DEL DIARIO -->
+
+        <section id="administrar-diario">
+
+            <h2>Administrar diario</h2>
+
+            <button id="boton-vaciar">
+                Vaciar diario
+            </button>
+
+            <button id="boton-recuperar">
+                Recuperar diario
+            </button>
+
+            <p id="mensaje-vaciar"></p>
+
+        </section>
+
+        <!-- RECORDATORIO -->
+
+        <section id="seccion-recordatorio">
+            <p id="recordatorio"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Film Journal - Mi diario de películas</p>
+    </footer>
+
+</body>
+</html>
